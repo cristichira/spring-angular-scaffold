@@ -1,0 +1,27 @@
+plugins {
+  id 'java'
+  id 'com.github.node-gradle.node' version '3.1.1'
+}
+
+node {
+  version = '12.18.2'
+  npmVersion = '6.4.1'
+  download = true
+}
+
+task buildWithProfile(type: NpxTask) {
+  dependsOn npmInstall
+  command = 'ng'
+  //  set the corresponding angular profile (example command: 'gradle build -Pprofile=staging')
+  args = ['build', "--configuration=${project.properties['profile'] ?: 'production'}"]
+}
+
+jar.dependsOn 'buildWithProfile'
+
+jar {
+  from 'dist/frontend' into 'static'
+}
+
+clean {
+  delete '.gradle'
+}

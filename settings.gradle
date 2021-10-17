@@ -1,0 +1,6 @@
+rootProject.name = 'com.servix.springangularscaffold'
+include 'frontend'
+include ':backend:backend-server'
+include ':backend:backend-administration'
+include ':backend:backend-shared'
+

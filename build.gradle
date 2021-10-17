@@ -1,0 +1,12 @@
+group = 'com.servix'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+subprojects { proj ->
+	apply plugin: 'java'
+	sourceCompatibility = 11
+}

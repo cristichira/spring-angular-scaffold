@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://eu-cdbr-west-01.cleardb.com/heroku_d711b68265c57f6?reconnect=true&useSSL=false&useUnicode=yes&characterEncoding=UTF-8
+    username: bffa0f0eaa51d1
+    password: 1fce9207
+custom-app-config:
+  cors:
+    allowed-origins:
+      - https://servix-staging-ui.herokuapp.com

@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  jackson:
+    date-format: yyyy-MM-dd
+  servlet:
+    multipart:
+      max-file-size: 5MB
+springdoc:
+  api-docs:
+    path: /api/docs/specification
+  swagger-ui:
+    path: /api/docs/swagger-ui.html
+custom-app-config:
+  cookies:
+    secure: true
+  security:
+    jwt:
+      token:
+        secret-key: /A?D(G-KaPdSgVkYp3s6v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-JaNdRfUjXn2r5u8x/A?D(G+KbPeShVkYp3s6v9y$B&E)H@McQfTjWnZq4t7w!z%C*F-JaNdRgUkXp
+        access-token-expire-length: 43200000 # 12 hours
+        refresh-token-expire-length: 604800000 # 1 week
