@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/springangularscaffold?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+custom-app-config:
+  cookies:
+    secure: false
+  cors:
+    allowed-origins:
+      - http://localhost:4200

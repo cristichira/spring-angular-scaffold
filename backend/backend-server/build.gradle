@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':backend:backend-administration')
+    compile project(':backend:backend-shared')
+}
