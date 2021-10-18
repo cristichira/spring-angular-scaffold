@@ -14,10 +14,6 @@ buildscript {
     }
 }
 
-dependencies {
-    compile project(':frontend')
-}
-
 subprojects { proj ->
     apply plugin: 'java'
     apply plugin: 'eclipse'
