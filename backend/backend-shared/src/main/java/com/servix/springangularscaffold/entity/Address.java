@@ -1,5 +1,6 @@
 package com.servix.springangularscaffold.entity;
 
+import com.servix.springangularscaffold.config.ProjectConstants;
 import com.servix.springangularscaffold.entity.base.EntityObject;
 
 import javax.persistence.Column;
@@ -7,12 +8,13 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 
+
 @Entity
-@Table(name = "sp_address")
+@Table(name = ProjectConstants.TABLE_PREFIX + "address")
 public class Address extends EntityObject {
 
-    @Column(name = "post_code")
-    private String postCode;
+    @Column(name = "zip_code")
+    private String zipCode;
 
     @Column(name = "city")
     private String city;
@@ -38,12 +40,12 @@ public class Address extends EntityObject {
     @Column(name = "latitude", precision = 7, scale = 3)
     private BigDecimal latitude;
 
-    public String getPostCode() {
-        return postCode;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setPostCode(String postCode) {
-        this.postCode = postCode;
+    public void setZipCode(String postCode) {
+        this.zipCode = postCode;
     }
 
     public String getCity() {

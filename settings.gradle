@@ -1,4 +1,4 @@
-rootProject.name = 'com.servix.springangularscaffold'
+rootProject.name = 'spring-angular-scaffold-project'
 include 'frontend'
 include ':backend:backend-server'
 include ':backend:backend-administration'

@@ -1,5 +1,5 @@
 dependencies {
-    compile project(':backend:backend-administration')
-    compile project(':backend:backend-shared')
-    compile project(':frontend')
+    implementation project(':backend:backend-administration')
+    implementation project(':backend:backend-shared')
+    implementation project(':frontend')
 }

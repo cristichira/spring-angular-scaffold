@@ -33,7 +33,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final ExceptionHandlerFilter exceptionHandlerFilter;
     private final YamlConfigurationProperties yamlConfigurationProperties;
 
-    private static final String EXCLUDE_URL = "/api/**";
     private static final long MAX_AGE_SECONDS = 3600;
 
     @Autowired
@@ -54,24 +53,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers(EXCLUDE_URL).permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .httpBasic()
+                .anyRequest().permitAll()
                 .and()
                 .logout()
                 .invalidateHttpSession(true);
 
         http.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         http.addFilterBefore(exceptionHandlerFilter, JwtTokenFilter.class);
-    }
-
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring()
-                .antMatchers("/**/*.{js|css|html}")
-                .antMatchers("/api/i18n/**")
-                .antMatchers("/favicon.ico");
     }
 
     @Bean

@@ -1,5 +1,5 @@
 dependencies {
-    compile project(':backend:backend-shared')
+    implementation project(':backend:backend-shared')
 
-    compile('io.jsonwebtoken:jjwt')
+    implementation 'io.jsonwebtoken:jjwt'
 }

@@ -1,5 +1,6 @@
 package com.servix.springangularscaffold.entity;
 
+import com.servix.springangularscaffold.config.ProjectConstants;
 import com.servix.springangularscaffold.entity.base.UrlFriendlyEntityObject;
 
 import javax.persistence.*;
@@ -10,9 +11,9 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-@Table(name = "sp_user",
-        indexes = {@Index(name = "url_name_index", columnList = "url_name", unique = true),
-                @Index(name = "email_index", columnList = "email", unique = true)}
+@Table(name = ProjectConstants.TABLE_PREFIX + "user",
+        indexes = {@Index(name = "INDEX_" + ProjectConstants.TABLE_PREFIX + "user_url_name", columnList = "url_name", unique = true),
+                @Index(name = "INDEX_" + ProjectConstants.TABLE_PREFIX + "user_email", columnList = "email", unique = true)}
 )
 public class User extends UrlFriendlyEntityObject {
 
@@ -55,11 +56,11 @@ public class User extends UrlFriendlyEntityObject {
     private LocalDate birthDate;
 
     @ElementCollection
-    @CollectionTable(name = "sp_user_role")
+    @CollectionTable(name = ProjectConstants.TABLE_PREFIX + "user_role")
     private Set<String> roles;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "address_id", table = "sp_user")
+    @JoinColumn(name = "address_id", table = ProjectConstants.TABLE_PREFIX + "user")
     private Address address;
 
     public String getFirstName() {
