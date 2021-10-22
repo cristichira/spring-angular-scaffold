@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 public class AddressDto extends BaseDto {
     private String number;
     private String street;
-    private String postCode;
+    private String zipCode;
     private String city;
     private String region;
     private String country;
@@ -15,12 +15,12 @@ public class AddressDto extends BaseDto {
     private BigDecimal longitude;
     private BigDecimal latitude;
 
-    public String getPostCode() {
-        return postCode;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setPostCode(String postCode) {
-        this.postCode = postCode;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     public String getCity() {

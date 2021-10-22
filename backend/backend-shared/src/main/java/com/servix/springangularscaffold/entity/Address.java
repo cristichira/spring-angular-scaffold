@@ -44,8 +44,8 @@ public class Address extends EntityObject {
         return zipCode;
     }
 
-    public void setZipCode(String postCode) {
-        this.zipCode = postCode;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     public String getCity() {
