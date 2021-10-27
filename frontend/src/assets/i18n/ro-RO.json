@@ -1,0 +1,59 @@
+{
+  "general": {
+    "locale": {
+      "en-US": "English",
+      "ro-RO": "Română"
+    }
+  },
+  "feature": {
+    "authentication": {
+      "register": {
+        "validation": {
+          "firstName": {
+            "required": "Câmp obligatoriu"
+          },
+          "lastName": {
+            "required": "Câmp obligatoriu"
+          },
+          "email": {
+            "required": "Câmp obligatoriu",
+            "email": "Acest email este invalid"
+          },
+          "password": {
+            "required": "Câmp obligatoriu",
+            "minlength": "Parola trebuie să conțină cel puțin 6 caractere"
+          },
+          "passwordGroup": {
+            "match": "Cele două parole nu sunt identice"
+          }
+        },
+        "register-button": "Înregistrare"
+      },
+      "login": {
+      }
+    },
+    "home": {
+      "homepage": {
+      }
+    },
+    "user": {
+      "user-details": {
+      },
+      "user-list": {
+      }
+    }
+  },
+  "shared": {
+    "error": {
+    },
+    "footer": {
+    },
+    "menu": {
+      "home": "Acasa",
+      "businesses": "Afaceri",
+      "users": "Utilizatori",
+      "login": "Autentificare",
+      "register": "Înregistrare"
+    }
+  }
+}

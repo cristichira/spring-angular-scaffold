@@ -1,0 +1,123 @@
+{
+  "general": {
+    "label": {
+      "address": "Address",
+      "street": "Street",
+      "birthDate": "Birth date",
+      "category": "Category",
+      "capacity": "Capacity",
+      "city": "City",
+      "companyName": "Company name",
+      "confirmPassword": "Confirm password",
+      "country": "Country",
+      "date": "Date",
+      "description": "Description",
+      "email": "Email",
+      "edit": "Edit",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "location": "Location",
+      "map": "View on map",
+      "number": "Number",
+      "owner": "Owner",
+      "password": "Password",
+      "phoneNumber": "Phone number",
+      "phoneNumberAlternate": "Alternative phone number",
+      "region": "Region",
+      "save": "Save",
+      "schedule": "Hours",
+      "postCode": "Post code",
+      "urlName": "URL value"
+    },
+    "validation": {
+      "required": "Mandatory field",
+      "email": "Invalid email address"
+    },
+    "application-name": "spring-angular-scaffold-project"
+  },
+  "enum": {
+    "dayOfWeek": {
+      "MONDAY": "Monday",
+      "TUESDAY": "Tuesday",
+      "WEDNESDAY": "Wednesday",
+      "THURSDAY": "Thursday",
+      "FRIDAY": "Friday",
+      "SATURDAY": "Saturday",
+      "SUNDAY": "Sunday"
+    },
+    "locale": {
+      "en-US": "English",
+      "ro-RO": "Română"
+    }
+  },
+  "feature": {
+    "authentication": {
+      "register": {
+        "validation": {
+          "password": {
+            "required": "Mandatory field",
+            "minlength": "The password must have a minimum length of 6 characters"
+          },
+          "passwordGroup": {
+            "match": "The passwords do not match"
+          }
+        },
+        "login-button": "Login",
+        "register-button": "Register",
+        "login-text": "Already on {{value}}?"
+      },
+      "login": {
+        "login-button": "Login",
+        "register-button": "Register",
+        "register-text": "New on {{value}}?"
+      }
+    },
+    "dashboard": {
+      "edit-profile": {
+        "header": "Update personal information"
+      },
+      "dashboard-business-details": {
+        "view-as-public": "View as user",
+        "edit-schedule": "Edit schedule",
+        "edit-timeframes": "Edit timeframes"
+      },
+      "my-businesses": {
+        "header": "Manage businesses",
+        "add-business": "Add business"
+      },
+      "overview": {
+        "user": {
+          "header": "Account information",
+          "edit-personal-info": "edit"
+        },
+        "business": {
+          "header": "Businesses",
+          "edit-businesses": "manage my businesses"
+        }
+      },
+      "sidebar": {
+        "dashboard": "Dashboard",
+        "edit-profile": "Edit account information",
+        "businesses": "Manage businesses",
+        "logout": "Log out"
+      }
+    },
+    "home": {
+      "homepage": {}
+    }
+  },
+  "shared": {
+    "error": {},
+    "footer": {},
+    "menu": {
+      "home": "Home",
+      "businesses": "Businesses",
+      "users": "Users",
+      "categories": "Categories",
+      "login": "Log in",
+      "my-account": "My account",
+      "logout": "Log out",
+      "register": "Register"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+<div class="row justify-content-lg-end mt-5">
+  <div class="col-12 col-lg-6">
+    <div class="row">
+      <div class="col">
+        <div class="logo rounded"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <form (ngSubmit)="save()" [formGroup]="registerForm" class="placeholder-form">
+              <div class="form-row">
+                <div class="col">
+                  <input [ngClass]="{'is-invalid': isValid(registerForm, 'firstName')}"
+                         class="form-control"
+                         formControlName="firstName"
+                         placeholder="{{'general.label.firstName' | translate}}"
+                         type="text">
+                  <span *ngIf="isValid(registerForm, 'firstName')"
+                        class="invalid-feedback">
+                    <span *ngFor="let error of registerForm.controls.firstName.errors | keyvalue">
+                      {{'general.validation.' + error.key | translate}}
+                    </span>
+                  </span>
+                </div>
+                <div class="col">
+                  <input [ngClass]="{'is-invalid': isValid(registerForm, 'lastName')}"
+                         class="form-control"
+                         formControlName="lastName"
+                         placeholder="{{'general.label.lastName' | translate}}"
+                         type="text">
+                  <span *ngIf="isValid(registerForm, 'lastName')"
+                        class="invalid-feedback">
+                    <span *ngFor="let error of registerForm.controls.lastName.errors | keyvalue">
+                      {{'general.validation.' + error.key | translate}}
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <input [ngClass]="{'is-invalid': isValid(registerForm, 'email')}"
+                         class="form-control"
+                         formControlName="email"
+                         placeholder="{{'general.label.email' | translate}}"
+                         type="text">
+                  <span *ngIf="isValid(registerForm, 'email')"
+                        class="invalid-feedback">
+                    <span *ngFor="let error of registerForm.controls.email.errors | keyvalue">
+                      {{'general.validation.' + error.key | translate}}
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group" formGroupName="passwordGroup">
+                <div class="form-row">
+                  <div class="col">
+                    <input
+                      [ngClass]="{'is-invalid': isValid(registerForm, 'passwordGroup.password')}"
+                      class="form-control"
+                      formControlName="password"
+                      placeholder="{{'general.label.password' | translate}}"
+                      type="password">
+                    <span *ngIf="isValid(registerForm, 'passwordGroup.password')"
+                          class="invalid-feedback">
+                      <span
+                        *ngFor="let error of registerForm.get('passwordGroup.password')?.errors | keyvalue">
+                        {{'feature.authentication.register.validation.password.'
+                      + error.key | translate}}
+                      </span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <input [ngClass]="{'is-invalid': registerForm.get('passwordGroup')?.errors?.match ||
+                         isValid(registerForm, 'passwordGroup.confirmPassword')}"
+                           class="form-control"
+                           formControlName="confirmPassword"
+                           placeholder="{{'general.label.confirmPassword' | translate}}"
+                           type="password">
+                    <span *ngIf="registerForm.get('passwordGroup')?.errors?.match ||
+                         isValid(registerForm, 'passwordGroup.confirmPassword')"
+                          class="invalid-feedback">
+                      <span
+                        *ngFor="let error of registerForm.get('passwordGroup')?.errors | keyvalue">
+                        {{'feature.authentication.register.validation.passwordGroup.'
+                      + error.key | translate}}
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row align-items-end">
+                <div class="col">
+                  <button [disabled]="!registerForm.valid" class="btn rounded btn-primary"
+                          type="submit">
+                    {{'feature.authentication.register.register-button' | translate}}
+                  </button>
+                </div>
+                <div class="col text-right">
+                  <span>{{'feature.authentication.login.register-text' | translate:{value: 'general.application-name' | translate} }}
+                    <a [routerLink]="['/login']" queryParamsHandling="preserve">
+                    {{'feature.authentication.login.login-button' | translate}}
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

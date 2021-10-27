@@ -1,0 +1,64 @@
+<div class="row justify-content-lg-end mt-5">
+  <div class="col-12 col-lg-6">
+    <div class="row">
+      <div class="col">
+        <div class="logo rounded"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <form (ngSubmit)="login()" [formGroup]="loginForm" class="placeholder-form">
+              <div class="form-row">
+                <div class="col">
+                  <input [ngClass]="{'is-invalid': isValid(loginForm, 'email')}"
+                         class="form-control" formControlName="email"
+                         placeholder="{{'general.label.email' | translate}}"
+                         type="text">
+                  <span *ngIf="isValid(loginForm, 'email')"
+                        class="invalid-feedback">
+                    <span *ngFor="let error of loginForm.controls.email.errors | keyvalue">
+                      {{'general.validation.' + error.key | translate}}
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <input [ngClass]="{'is-invalid': isValid(loginForm, 'password')}"
+                         class="form-control" formControlName="password"
+                         placeholder="{{'general.label.password' | translate}}"
+                         type="password">
+                  <span *ngIf="isValid(loginForm, 'password')"
+                        class="invalid-feedback">
+                    <span *ngFor="let error of loginForm.controls.password.errors | keyvalue">
+                      {{'general.validation.' + error.key | translate}}
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="row align-items-end">
+                <div class="col">
+                  <button [disabled]="!loginForm.valid" class="btn rounded btn-primary"
+                          type="submit">
+                    {{'feature.authentication.login.login-button' | translate}}
+                  </button>
+                </div>
+                <div class="col text-right">
+                  <span>{{'feature.authentication.login.register-text' | translate:{value: 'general.application-name' | translate} }}
+                    <a [routerLink]="['/register']" queryParamsHandling="preserve">
+                    {{'feature.authentication.login.register-button' | translate}}
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
