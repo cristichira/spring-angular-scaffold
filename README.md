@@ -21,7 +21,7 @@
 ## 3) How to run the application
 
 Locally there are 2 ways of running the app:
-* run `ng serve` in the `frontend` module to serve the angular application and run the @SpringbootApplication main class with the profile `local`
+* run `ng serve` in the `frontend` module to serve the angular application and run the @SpringbootApplication main class with the profile `local`. For a faster startup, comment out the `frontend` module dependency from the `backend-server` 's `build.gradle`
 * run the `bootRun` Gradle task after setting the argument `-Pprofile=dev` and the environment variable `SPRING_PROFILES_ACTIVE=local`. This will run the jar the same way it runs on other stages when deploying the app.
 
 ## 4) Steps to create a new application using the template
