@@ -1,0 +1,66 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "no-console": [
+      false
+    ],
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
+    "prefer-function-over-method": false,
+    "array-type": [
+      true,
+      "array"
+    ],
+    "newline-per-chained-call": false,
+    "prefer-readonly": false,
+    "no-void-expression": false,
+    "variable-name": {
+      "options": [
+        "allow-pascal-case",
+        "allow-leading-underscore"
+      ]
+    },
+    "no-floating-promises": false,
+    "invalid-void": [
+      true,
+      {
+        "allow-generics": [
+          "EventEmitter",
+          "Promise"
+        ]
+      }
+    ],
+    "no-parameter-reassignment": false,
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration",
+      "object-destructuring",
+      "array-destructuring"
+    ],
+    "no-inferrable-types": false,
+    "no-relative-imports": false,
+    "trailing-comma": false,
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "object-literal-sort-keys": false,
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "radix": false,
+    "newline-before-return": true
+  }
+}

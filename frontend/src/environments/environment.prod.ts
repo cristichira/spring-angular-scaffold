@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   name: 'production',
-  baseUrl: 'https://conrock.herokuapp.com'
+  baseUrl: 'https://spring-angular-scaffold.herokuapp.com/'
 };

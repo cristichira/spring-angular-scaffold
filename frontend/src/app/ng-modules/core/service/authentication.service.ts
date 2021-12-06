@@ -1,12 +1,12 @@
-import {Injectable} from '@angular/core';
-import {Register} from '../models/register.model';
-import {Observable} from 'rxjs';
-import {User} from '../models/user/user.model';
-import {ConfigService} from './config.service';
-import {HttpClient} from '@angular/common/http';
-import {Login} from '../models/login.model';
-import {shareReplay, tap} from 'rxjs/operators';
-import {AuthenticationStore} from '../store/authentication-store.service';
+import { Injectable } from '@angular/core';
+import { Register } from '../models/register.model';
+import { Observable } from 'rxjs';
+import { User, UserRole } from '../models/user/user.model';
+import { ConfigService } from './config.service';
+import { HttpClient } from '@angular/common/http';
+import { Login } from '../models/login.model';
+import { shareReplay, tap } from 'rxjs/operators';
+import { AuthenticationStore } from '../store/authentication-store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -52,5 +52,10 @@ export class AuthenticationService {
     return this.httpClient.post<null>(`${this.serviceUrl}/logout`, null).pipe(
       shareReplay()
     );
+  }
+
+  hasRole(role: UserRole): boolean {
+    return this.authenticationStore.isLoggedIn() &&
+      this.authenticationStore.getCurrentUser().roles.includes(role);
   }
 }

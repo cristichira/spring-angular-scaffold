@@ -1,1 +1,237 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-primary: #000000;
+  --color-primary-darker: #262626;
+  --color-primary-disabled: #747474;
+  --color-primary-2: #0D0630;
+  --color-primary-3: #6a7680;
+  --color-primary-3-darker: #47505a;
+  --color-primary-4: #B20D30;
+  --color-primary-background: #F8F9FA;
+  --color-primary-background-2: #EFEFEF;
+  --color-primary-background-3: #F5F5F5;
+  --anchor-color: #014F86;
+  --body-color: #ffffff;
+}
+
+.color-black {
+  color: #000 !important;
+  text-decoration-color: #000;
+}
+
+.color-disabled {
+  color: var(--color-primary-3) !important;
+  text-decoration-color: var(--color-primary-3);
+}
+
+.list-group-item.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary-darker);
+}
+
+.square:before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* initial ratio of 1:1*/
+}
+
+.responsive-image-container {
+  position: relative;
+  width: 37%; /* The size you want */
+
+  &.aspect-ratio-7-2 {
+    &:after {
+      padding-bottom: 29%; /* 7:2 ratio */
+    }
+  }
+
+  &.aspect-ratio-16-9 {
+    &:after {
+      padding-bottom: 66%; /* 16:9 ratio */
+    }
+  }
+
+  &.aspect-ratio-4-3 {
+    &:after {
+      padding-bottom: 80%; /* 4:3 ratio */
+    }
+  }
+
+  &.aspect-ratio-1-1 {
+    &:after {
+      padding-bottom: 110%; /* 1:1 ratio */
+    }
+  }
+
+  &.col-padding {
+    img {
+      padding: 0 15px;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; /* 1:1 ratio */
+  }
+
+  img {
+    position: absolute; /* Take your picture out of the flow */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Make the picture taking the size of it's parent */
+    width: 100%; /* This if for the object-fit */
+    height: 100%; /* This if for the object-fit */
+    object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+    object-position: center;
+  }
+}
+
+.btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary-darker) !important;
+  box-shadow: none !important;
+
+  &:not(:disabled):not(.disabled) {
+    &.active {
+      background-color: var(--color-primary-darker);
+      border-color: var(--color-primary-darker);
+    }
+
+    &:active {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary-darker);
+    }
+
+    &:focus {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary-darker);
+    }
+
+    &:hover {
+      background-color: var(--color-primary-darker);
+      border-color: var(--color-primary-darker);
+    }
+  }
+
+  &:disabled {
+    background-color: var(--color-primary-disabled);
+    border-color: var(--color-primary-darker);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--color-primary-3);
+  border-color: var(--color-primary-3-darker);
+  box-shadow: none !important;
+
+  &:not(:disabled):not(.disabled) {
+    &.active {
+      background-color: var(--color-primary-3-darker);
+      border-color: var(--color-primary-3-darker);
+    }
+
+    &:active {
+      background-color: var(--color-primary-3);
+      border-color: var(--color-primary-3-darker);
+    }
+
+    &:focus {
+      background-color: var(--color-primary-3);
+      border-color: var(--color-primary-3-darker);
+    }
+
+    &:hover {
+      background-color: var(--color-primary-3-darker);
+      border-color: var(--color-primary-3-darker);
+    }
+  }
+
+  &:disabled {
+    background-color: var(--color-primary-3-disabled);
+    border-color: var(--color-primary-3-darker);
+  }
+}
+
+.form-control {
+
+  &:active {
+    border-color: var(--color-primary-darker);
+    box-shadow: none;
+  }
+
+  &:focus {
+    border-color: var(--color-primary-darker);
+    box-shadow: none;
+  }
+}
+
+.show > .btn-primary.dropdown-toggle {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary-darker);
+}
+
+.dropdown-item {
+  &:active, &.active {
+    background-color: var(--color-primary);
+  }
+}
+
+.custom-file-input:focus ~ .custom-file-label {
+  border-color: var(--color-primary-darker);
+  box-shadow: none;
+}
+
+form {
+  &.placeholder-form {
+    > * {
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      > * {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  :not(.placeholder-form) {
+    .form-group {
+      > label {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--color-primary-background);
+  color: var(--body-color);
+}
+
+a {
+  color: var(--anchor-color);
+}
+
+.list-item {
+  padding: 15px;
+
+  &:hover {
+    box-shadow: rgb(0 0 0 / 12%) -0.0625rem 0.1875rem 0.375rem;
+  }
+
+  .card-title {
+    overflow: hidden;
+  }
+}

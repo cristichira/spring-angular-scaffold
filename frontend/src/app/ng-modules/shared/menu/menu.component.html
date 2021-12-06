@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-xl">
+  <button class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse ml-lg-5" id="navbarCollapse">
+    <div class="navbar-nav">
+    </div>
+    <div class="navbar-nav ml-auto mr-lg-5">
+      <a [routerLink]="['/home']"
+         class="nav-item nav-link"
+         routerLinkActive="active">{{ 'shared.menu.home' | translate }}</a>
+
+      <span (click)="useLanguage(locale)" *ngFor="let locale of locales"
+            [ngClass]="'flag-icon-' + (locale | lowercase | slice:-2 )"
+            class="flag-icon mr-2" role="button"></span>
+      <div class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true"
+           class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+           id="navbarDropdownAccount" role="button">
+          <span class="fas fa-user"></span>
+        </a>
+        <div aria-labelledby="navbarDropdownAccount" class="dropdown-menu dropdown-menu-right">
+          <a *ngIf="!currentUser" [routerLink]="['/register']"
+             class="nav-item nav-link"
+             routerLinkActive="active">{{ 'shared.menu.register' | translate }}</a>
+          <a *ngIf="!currentUser" [routerLink]="['/login']"
+             class="nav-item nav-link"
+             routerLinkActive="active">{{ 'shared.menu.login' | translate }}</a>
+          <a (click)="logout()" *ngIf="currentUser" class="nav-item nav-link"
+             role="button">{{ 'shared.menu.logout' | translate }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

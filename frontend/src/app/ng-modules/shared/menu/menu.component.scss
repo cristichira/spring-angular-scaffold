@@ -1,0 +1,21 @@
+.navbar {
+  background-color: var(--color-primary) !important;
+
+  .navbar-nav {
+    > a {
+      color: var(--body-color);
+    }
+
+    > .dropdown {
+      > a {
+        color: var(--body-color);
+      }
+
+      > .dropdown-menu {
+        > a {
+          color: #000 !important;
+        }
+      }
+    }
+  }
+}
