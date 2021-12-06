@@ -11,8 +11,8 @@ custom-app-config:
 storage:
   aws:
     credentials:
-      access-key: xxxxxx
-      secret-key: xxxxxx
+      access-key:
+      secret-key:
     s3:
       endpoint: s3.nl-ams.scw.cloud
       region: nl-ams
