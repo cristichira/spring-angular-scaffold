@@ -9,3 +9,12 @@ custom-app-config:
   cors:
     allowed-origins:
       - http://localhost:4200
+storage:
+  aws:
+    credentials:
+      access-key: minioadmin
+      secret-key: minioadmin
+    s3:
+      endpoint: http://localhost:9000
+      region:
+      public-resource: "arn:aws:s3:::springangularscaffold/public/*"

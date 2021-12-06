@@ -1,0 +1,26 @@
+<div class="row mb-2">
+  <div class="col responsive-image-container aspect-ratio-16-9 col-padding">
+    <img [src]="pictureToDisplay" alt="Responsive image">
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="input-group">
+      <div class="custom-file">
+        <input (change)="onChange($event)" class="custom-file-input" id="uploadPicture"
+               type="file">
+        <label class="custom-file-label" for="uploadPicture">Choose file</label>
+      </div>
+      <div class="input-group-append">
+        <button (click)="resetPicture()" class="input-group-text" title="Reset" type="button">
+          <span class="fa fa-undo"></span>
+        </button>
+      </div>
+      <div class="input-group-append">
+        <button (click)="removePicture()" class="input-group-text" title="Remove" type="button">
+          <span class="fas fa-trash"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

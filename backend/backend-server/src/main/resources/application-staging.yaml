@@ -6,4 +6,14 @@ spring:
 custom-app-config:
   cors:
     allowed-origins:
-      - https://servix-staging-ui.herokuapp.com
+      - https://springangularscaffold.herokuapp.com
+
+storage:
+  aws:
+    credentials:
+      access-key: xxxxxx
+      secret-key: xxxxxx
+    s3:
+      endpoint: s3.nl-ams.scw.cloud
+      region: nl-ams
+      public-resource: "springangularscaffold/public/*"

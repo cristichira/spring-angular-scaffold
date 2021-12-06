@@ -27,3 +27,16 @@ custom-app-config:
         secret-key: /A?D(G-KaPdSgVkYp3s6v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-JaNdRfUjXn2r5u8x/A?D(G+KbPeShVkYp3s6v9y$B&E)H@McQfTjWnZq4t7w!z%C*F-JaNdRgUkXp
         access-token-expire-length: 43200000 # 12 hours
         refresh-token-expire-length: 604800000 # 1 week
+storage:
+  aws:
+    credentials:
+      access-key:
+      secret-key:
+    s3:
+      bucket-name: springangularscaffold
+      endpoint:
+      region:
+      public-resource:
+      public-files-prefix: public
+  picture-resizing:
+    max-size: 1200

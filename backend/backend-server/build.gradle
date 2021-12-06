@@ -1,5 +1,6 @@
 dependencies {
     implementation project(':backend:backend-administration')
     implementation project(':backend:backend-shared')
+    implementation project(':backend:file-storage')
     implementation project(':frontend')
 }

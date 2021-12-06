@@ -6,13 +6,15 @@ import { ErrorComponent } from './error/error.component';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { PictureUploadComponent } from './feature/file/picture-upload/picture-upload.component';
 
 
 @NgModule({
   declarations: [
     ErrorComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    PictureUploadComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     RouterModule,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    PictureUploadComponent
   ]
 })
 export class SharedModule {

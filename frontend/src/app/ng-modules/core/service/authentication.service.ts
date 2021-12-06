@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Register } from '../models/register.model';
 import { Observable } from 'rxjs';
 import { User, UserRole } from '../models/user/user.model';
-import { ConfigService } from './config.service';
 import { HttpClient } from '@angular/common/http';
 import { Login } from '../models/login.model';
 import { shareReplay, tap } from 'rxjs/operators';
@@ -15,7 +14,6 @@ export class AuthenticationService {
   serviceUrl: string = 'api/auth';
 
   constructor(private authenticationStore: AuthenticationStore,
-              private configService: ConfigService,
               private httpClient: HttpClient) {
   }
 

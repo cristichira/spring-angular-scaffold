@@ -1,12 +1,10 @@
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
-import {HttpClient, HttpParams} from '@angular/common/http';
-import {Injectable} from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
-import {Page} from '../models/page.model';
-import {User} from '../models/user/user.model';
-import {AuthenticationStore} from '../store/authentication-store.service';
-import {ConfigService} from './config.service';
+import { Page } from '../models/page.model';
+import { User } from '../models/user/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +12,7 @@ import {ConfigService} from './config.service';
 export class UserService {
   serviceUrl: string = 'api/users';
 
-  constructor(private authenticationStore: AuthenticationStore,
-              private configService: ConfigService,
-              private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
   get(id: number): Observable<User> {
