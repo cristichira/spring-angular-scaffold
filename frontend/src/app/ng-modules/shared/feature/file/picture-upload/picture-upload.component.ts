@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FileService } from 'src/app/ng-modules/core/service/file.service';
 
 import { HelperService } from '../../../../core/helper/helper.service';
 import { FileView } from '../../../../core/models/file/file-view.model';
-import { FileService } from '../../../../core/services/file.service';
 
 @Component({
   selector: 'app-picture-upload',

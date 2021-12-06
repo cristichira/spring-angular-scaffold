@@ -1,7 +1,6 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {FileView} from '../models/file/file-view.model';
-import {ConfigService} from '../service/config.service';
+import { FileView } from '../models/file/file-view.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +8,7 @@ import {ConfigService} from '../service/config.service';
 export class HelperService {
   backgroundCardPlaceholder: string;
 
-  constructor(private configService: ConfigService) {
+  constructor() {
     this.backgroundCardPlaceholder = '../../../../../assets/images/background-card.jpg';
   }
 
